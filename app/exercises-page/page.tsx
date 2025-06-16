@@ -8,7 +8,6 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Checkbox } from '@/components/ui/checkbox';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { 
   Activity, 
@@ -85,7 +84,7 @@ const exercises: Exercise[] = [
     ],
     tips: [
       'Keep your weight in your heels',
-      'Don\'t let knees cave inward',
+      'Don&apos;t let knees cave inward',
       'Maintain a straight back throughout'
     ],
     caloriesPerMin: 6
@@ -129,7 +128,7 @@ const exercises: Exercise[] = [
       'Hold position while breathing normally'
     ],
     tips: [
-      'Don\'t let hips sag or pike up',
+      'Don&apos;t let hips sag or pike up',
       'Engage your core muscles',
       'Start with shorter holds and build up'
     ],
@@ -211,7 +210,7 @@ const exercises: Exercise[] = [
     type: 'flexibility',
     duration: '20-60 minutes',
     instructions: [
-      'Begin in child\'s pose to center yourself',
+      'Begin in child&apos;s pose to center yourself',
       'Move through sun salutation sequence',
       'Hold each pose for 5-8 breaths',
       'End with relaxation in savasana'
