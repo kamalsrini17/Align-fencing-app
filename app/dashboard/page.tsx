@@ -129,7 +129,7 @@ export default function Dashboard() {
             Welcome back, {userName.split(' ')[0]}! 👋
           </h1>
           <p className="text-gray-600">
-            You're on a {currentStreak}-day streak! Keep up the great work.
+            You&apos;re on a {currentStreak}-day streak! Keep up the great work.
           </p>
         </div>
 
@@ -268,7 +268,7 @@ export default function Dashboard() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Brain className="w-5 h-5 mr-2 text-purple-500" />
-                  Today's Readiness
+                  Today&apos;s Readiness
                 </CardTitle>
                 <CardDescription>Your readiness factors</CardDescription>
               </CardHeader>

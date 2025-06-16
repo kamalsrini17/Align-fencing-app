@@ -128,7 +128,7 @@ export default function DailyReadinessTracker() {
     if (score >= 80) {
       return {
         type: 'High Intensity',
-        description: 'You\'re ready for challenging workouts today!',
+        description: 'You&apos;re ready for challenging workouts today!',
         icon: '🔥',
         suggestions: ['HIIT training', 'Heavy strength training', 'Sport activities']
       };
@@ -252,7 +252,7 @@ export default function DailyReadinessTracker() {
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Daily Readiness Check-in</h1>
           <p className="text-gray-600">
-            Rate how you're feeling today to get personalized workout recommendations
+            Rate how you&apos;re feeling today to get personalized workout recommendations
           </p>
         </div>
 
@@ -339,7 +339,7 @@ export default function DailyReadinessTracker() {
           <CardHeader>
             <CardTitle className="flex items-center">
               <TrendingUp className="w-5 h-5 mr-2 text-green-500" />
-              Today's Workout Recommendation
+              Today&apos;s Workout Recommendation
             </CardTitle>
           </CardHeader>
           <CardContent>
