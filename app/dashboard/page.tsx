@@ -28,29 +28,48 @@ import {
   Moon,
   LogOut
 } from 'lucide-react';
-import { getUserSession, clearUserSession, isAuthenticated } from '@/lib/auth';
+import { getUserSession, signOutUser, isAuthenticated, onAuthStateChange, type User } from '@/lib/auth';
 
 export default function Dashboard() {
   const router = useRouter();
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [currentStreak] = useState(7);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Set up auth state listener
+    const unsubscribe = onAuthStateChange((userData) => {
+      setUser(userData);
+      setIsLoading(false);
+      
+      if (!userData) {
+        router.push('/sign-in-page');
+      }
+    });
+
+    // Check initial auth state
     if (!isAuthenticated()) {
       router.push('/sign-in-page');
-      return;
+      setIsLoading(false);
+    } else {
+      const userData = getUserSession();
+      setUser(userData);
+      setIsLoading(false);
     }
-    
-    const userData = getUserSession();
-    setUser(userData);
+
+    return () => unsubscribe();
   }, [router]);
 
-  const handleSignOut = () => {
-    clearUserSession();
-    router.push('/sign-in-page');
+  const handleSignOut = async () => {
+    try {
+      await signOutUser();
+      router.push('/sign-in-page');
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
   };
 
-  if (!user) {
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
         <div className="text-center">
@@ -61,6 +80,10 @@ export default function Dashboard() {
         </div>
       </div>
     );
+  }
+
+  if (!user) {
+    return null; // Will redirect to sign-in
   }
 
   const todayStats = {
