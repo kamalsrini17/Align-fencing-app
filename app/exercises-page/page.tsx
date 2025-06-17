@@ -28,6 +28,7 @@ import {
   X,
   CheckCircle
 } from 'lucide-react';
+import exerciseData from '@/lib/data/exercise_bank.json';
 
 interface Exercise {
   id: number;
@@ -37,201 +38,67 @@ interface Exercise {
   equipment: string[];
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   type: 'strength' | 'cardio' | 'flexibility' | 'plyometric' | 'core' | 'warmup';
-  duration: string;
-  instructions: string[];
-  tips: string[];
-  caloriesPerMin: number;
-  image?: string;
+  instructions?: string[];
+  tips?: string[];
+  caloriesPerMin?: number;
+  duration?: string;
+  description?: string;
 }
 
-const exercises: Exercise[] = [
-  {
-    id: 1,
-    name: 'Push-ups',
-    category: 'Upper Body',
-    muscleGroups: ['Chest', 'Shoulders', 'Triceps'],
-    equipment: ['Bodyweight'],
-    difficulty: 'beginner',
-    type: 'strength',
-    duration: '3-5 sets',
-    instructions: [
-      'Start in a plank position with hands slightly wider than shoulders',
-      'Lower your body until chest nearly touches the floor',
-      'Push back up to starting position',
-      'Keep your core tight throughout the movement'
-    ],
-    tips: [
-      'Start with knee push-ups if regular push-ups are too difficult',
-      'Focus on controlled movement rather than speed',
-      'Keep your head in neutral position'
-    ],
-    caloriesPerMin: 8
-  },
-  {
-    id: 2,
-    name: 'Squats',
-    category: 'Lower Body',
-    muscleGroups: ['Quadriceps', 'Glutes', 'Hamstrings'],
-    equipment: ['Bodyweight'],
-    difficulty: 'beginner',
-    type: 'strength',
-    duration: '3-4 sets',
-    instructions: [
-      'Stand with feet shoulder-width apart',
-      'Lower your body as if sitting back into a chair',
-      'Keep your chest up and knees tracking over toes',
-      'Return to standing position'
-    ],
-    tips: [
-      'Keep your weight in your heels',
-      'Don&apos;t let knees cave inward',
-      'Maintain a straight back throughout'
-    ],
-    caloriesPerMin: 6
-  },
-  {
-    id: 3,
-    name: 'Burpees',
-    category: 'Full Body',
-    muscleGroups: ['Full Body'],
-    equipment: ['Bodyweight'],
-    difficulty: 'advanced',
-    type: 'plyometric',
-    duration: '10-15 reps',
-    instructions: [
-      'Start standing, then squat down and place hands on ground',
-      'Jump feet back into plank position',
-      'Do a push-up (optional)',
-      'Jump feet back to squat position',
-      'Jump up with arms overhead'
-    ],
-    tips: [
-      'Land softly to protect your joints',
-      'Modify by stepping instead of jumping',
-      'Focus on form over speed'
-    ],
-    caloriesPerMin: 12
-  },
-  {
-    id: 4,
-    name: 'Plank',
-    category: 'Core',
-    muscleGroups: ['Core', 'Shoulders'],
-    equipment: ['Bodyweight'],
-    difficulty: 'beginner',
-    type: 'core',
-    duration: '30-60 seconds',
-    instructions: [
-      'Start in push-up position',
-      'Lower onto forearms',
-      'Keep body in straight line from head to heels',
-      'Hold position while breathing normally'
-    ],
-    tips: [
-      'Don&apos;t let hips sag or pike up',
-      'Engage your core muscles',
-      'Start with shorter holds and build up'
-    ],
-    caloriesPerMin: 3
-  },
-  {
-    id: 5,
-    name: 'Running',
-    category: 'Cardio',
-    muscleGroups: ['Legs', 'Cardiovascular'],
-    equipment: ['None'],
-    difficulty: 'beginner',
-    type: 'cardio',
-    duration: '20-60 minutes',
-    instructions: [
-      'Start with a 5-minute warm-up walk',
-      'Maintain a steady, comfortable pace',
-      'Land on midfoot, not heel',
-      'Keep shoulders relaxed and arms swinging naturally'
-    ],
-    tips: [
-      'Start slowly and build distance gradually',
-      'Invest in proper running shoes',
-      'Stay hydrated during longer runs'
-    ],
-    caloriesPerMin: 10
-  },
-  {
-    id: 6,
-    name: 'Deadlift',
-    category: 'Lower Body',
-    muscleGroups: ['Hamstrings', 'Glutes', 'Lower Back'],
-    equipment: ['Barbell', 'Dumbbells'],
-    difficulty: 'intermediate',
-    type: 'strength',
-    duration: '3-5 sets',
-    instructions: [
-      'Stand with feet hip-width apart, bar over mid-foot',
-      'Hinge at hips, keeping chest up and back straight',
-      'Grip bar with hands shoulder-width apart',
-      'Drive through heels to lift, extending hips and knees together'
-    ],
-    tips: [
-      'Keep the bar close to your body throughout',
-      'Start with lighter weight to master form',
-      'Engage your lats to protect your back'
-    ],
-    caloriesPerMin: 8
-  },
-  {
-    id: 7,
-    name: 'Mountain Climbers',
-    category: 'Full Body',
-    muscleGroups: ['Core', 'Shoulders', 'Legs'],
-    equipment: ['Bodyweight'],
-    difficulty: 'intermediate',
-    type: 'plyometric',
-    duration: '30-60 seconds',
-    instructions: [
-      'Start in plank position',
-      'Bring right knee toward chest',
-      'Quickly switch, bringing left knee to chest',
-      'Continue alternating at a rapid pace'
-    ],
-    tips: [
-      'Keep hips level throughout movement',
-      'Maintain plank position in upper body',
-      'Start slower to ensure proper form'
-    ],
-    caloriesPerMin: 10
-  },
-  {
-    id: 8,
-    name: 'Yoga Flow',
-    category: 'Flexibility',
-    muscleGroups: ['Full Body'],
-    equipment: ['Yoga Mat'],
-    difficulty: 'beginner',
-    type: 'flexibility',
-    duration: '20-60 minutes',
-    instructions: [
-      'Begin in child&apos;s pose to center yourself',
-      'Move through sun salutation sequence',
-      'Hold each pose for 5-8 breaths',
-      'End with relaxation in savasana'
-    ],
-    tips: [
-      'Focus on breath throughout practice',
-      'Never force a stretch',
-      'Modify poses as needed for your body'
-    ],
-    caloriesPerMin: 3
+// Map categories to workout types
+const getWorkoutType = (category: string): string => {
+  switch (category.toLowerCase()) {
+    case 'shoulders':
+    case 'arms':
+    case 'chest':
+    case 'back':
+      return 'Upper Body';
+    case 'legs':
+      return 'Lower Body';
+    case 'core':
+      return 'Core';
+    case 'cardio':
+      return 'Cardio';
+    case 'power':
+    case 'agility':
+    case 'functional':
+    case 'mobility':
+      return 'Full Body';
+    default:
+      return 'Full Body';
   }
-];
+};
 
-const categories = ['All', 'Upper Body', 'Lower Body', 'Core', 'Full Body', 'Cardio', 'Flexibility'];
+// Transform the JSON data to match our interface
+const exercises: Exercise[] = exerciseData.map(exercise => ({
+  ...exercise,
+  instructions: [
+    'Follow proper form and technique',
+    'Start with appropriate weight/intensity',
+    'Focus on controlled movements',
+    'Breathe properly throughout the exercise'
+  ],
+  tips: [
+    'Warm up before starting',
+    'Listen to your body',
+    'Progress gradually'
+  ],
+  caloriesPerMin: exercise.type === 'cardio' ? 10 : exercise.type === 'plyometric' ? 8 : 5,
+  duration: exercise.type === 'cardio' ? '20-45 min' : exercise.type === 'flexibility' ? '30-60 sec' : '3-4 sets',
+  description: `${exercise.difficulty.charAt(0).toUpperCase() + exercise.difficulty.slice(1)} level ${exercise.type} exercise targeting ${exercise.muscleGroups.join(', ')}`
+}));
+
+const workoutTypes = ['All', 'Upper Body', 'Lower Body', 'Core', 'Cardio', 'Full Body'];
 const difficulties = ['All', 'Beginner', 'Intermediate', 'Advanced'];
 const types = ['All', 'Strength', 'Cardio', 'Flexibility', 'Plyometric', 'Core', 'Warmup'];
-const equipment = ['All', 'Bodyweight', 'Dumbbells', 'Barbell', 'Resistance Bands', 'Yoga Mat', 'None'];
+
+// Get unique equipment from the data
+const allEquipment = Array.from(new Set(exercises.flatMap(ex => ex.equipment)));
+const equipment = ['All', ...allEquipment];
 
 export default function ExercisesPage() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedWorkoutType, setSelectedWorkoutType] = useState('All');
   const [selectedDifficulty, setSelectedDifficulty] = useState('All');
   const [selectedType, setSelectedType] = useState('All');
   const [selectedEquipment, setSelectedEquipment] = useState('All');
@@ -242,11 +109,13 @@ export default function ExercisesPage() {
 
   const filteredExercises = useMemo(() => {
     return exercises.filter(exercise => {
+      const workoutType = getWorkoutType(exercise.category);
+      
       const matchesSearch = exercise.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            exercise.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            exercise.muscleGroups.some(mg => mg.toLowerCase().includes(searchTerm.toLowerCase()));
       
-      const matchesCategory = selectedCategory === 'All' || exercise.category === selectedCategory;
+      const matchesWorkoutType = selectedWorkoutType === 'All' || workoutType === selectedWorkoutType;
       const matchesDifficulty = selectedDifficulty === 'All' || 
                                exercise.difficulty.toLowerCase() === selectedDifficulty.toLowerCase();
       const matchesType = selectedType === 'All' || 
@@ -255,10 +124,10 @@ export default function ExercisesPage() {
                               exercise.equipment.includes(selectedEquipment);
       const matchesFavorites = activeTab !== 'favorites' || favorites.includes(exercise.id);
 
-      return matchesSearch && matchesCategory && matchesDifficulty && 
+      return matchesSearch && matchesWorkoutType && matchesDifficulty && 
              matchesType && matchesEquipment && matchesFavorites;
     });
-  }, [searchTerm, selectedCategory, selectedDifficulty, selectedType, selectedEquipment, favorites, activeTab]);
+  }, [searchTerm, selectedWorkoutType, selectedDifficulty, selectedType, selectedEquipment, favorites, activeTab]);
 
   const toggleFavorite = (exerciseId: number) => {
     setFavorites(prev => 
@@ -270,7 +139,7 @@ export default function ExercisesPage() {
 
   const clearAllFilters = () => {
     setSearchTerm('');
-    setSelectedCategory('All');
+    setSelectedWorkoutType('All');
     setSelectedDifficulty('All');
     setSelectedType('All');
     setSelectedEquipment('All');
@@ -333,7 +202,7 @@ export default function ExercisesPage() {
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Exercise Library</h1>
           <p className="text-gray-600">
-            Discover exercises tailored to your fitness goals and preferences
+            Discover {exercises.length} exercises tailored to your fitness goals and preferences
           </p>
         </div>
 
@@ -356,13 +225,13 @@ export default function ExercisesPage() {
 
               {/* Quick Filters */}
               <div className="flex flex-wrap gap-2 lg:gap-4">
-                <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                <Select value={selectedWorkoutType} onValueChange={setSelectedWorkoutType}>
                   <SelectTrigger className="w-[140px]">
-                    <SelectValue placeholder="Category" />
+                    <SelectValue placeholder="Workout Type" />
                   </SelectTrigger>
                   <SelectContent>
-                    {categories.map(category => (
-                      <SelectItem key={category} value={category}>{category}</SelectItem>
+                    {workoutTypes.map(type => (
+                      <SelectItem key={type} value={type}>{type}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -387,7 +256,7 @@ export default function ExercisesPage() {
                   More Filters
                 </Button>
 
-                {(searchTerm || selectedCategory !== 'All' || selectedDifficulty !== 'All' || 
+                {(searchTerm || selectedWorkoutType !== 'All' || selectedDifficulty !== 'All' || 
                   selectedType !== 'All' || selectedEquipment !== 'All') && (
                   <Button variant="ghost" onClick={clearAllFilters}>
                     <X className="w-4 h-4 mr-2" />
@@ -462,6 +331,7 @@ export default function ExercisesPage() {
           {filteredExercises.map((exercise) => {
             const TypeIcon = getTypeIcon(exercise.type);
             const isFavorited = favorites.includes(exercise.id);
+            const workoutType = getWorkoutType(exercise.category);
 
             return (
               <Card key={exercise.id} className="group hover:shadow-lg transition-all duration-200 border-0 shadow-md">
@@ -481,7 +351,7 @@ export default function ExercisesPage() {
                         <CardTitle className="text-lg group-hover:text-blue-600 transition-colors">
                           {exercise.name}
                         </CardTitle>
-                        <CardDescription>{exercise.category}</CardDescription>
+                        <CardDescription>{workoutType}</CardDescription>
                       </div>
                     </div>
                     <Button
@@ -566,7 +436,7 @@ export default function ExercisesPage() {
                               <span>{exercise.name}</span>
                             </DialogTitle>
                             <DialogDescription>
-                              {exercise.category} • {exercise.difficulty} • {exercise.type}
+                              {workoutType} • {exercise.difficulty} • {exercise.type}
                             </DialogDescription>
                           </DialogHeader>
                           <div className="space-y-6">
@@ -594,7 +464,7 @@ export default function ExercisesPage() {
                             <div>
                               <h4 className="font-semibold mb-3">Instructions</h4>
                               <ol className="space-y-2">
-                                {exercise.instructions.map((instruction, index) => (
+                                {exercise.instructions?.map((instruction, index) => (
                                   <li key={index} className="flex items-start space-x-3">
                                     <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-medium">
                                       {index + 1}
@@ -609,7 +479,7 @@ export default function ExercisesPage() {
                             <div>
                               <h4 className="font-semibold mb-3">Pro Tips</h4>
                               <ul className="space-y-2">
-                                {exercise.tips.map((tip, index) => (
+                                {exercise.tips?.map((tip, index) => (
                                   <li key={index} className="flex items-start space-x-3">
                                     <CheckCircle className="flex-shrink-0 w-5 h-5 text-green-500 mt-0.5" />
                                     <span className="text-gray-700">{tip}</span>
