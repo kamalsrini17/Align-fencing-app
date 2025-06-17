@@ -9,7 +9,7 @@ const nextConfig = {
       ...config.optimization,
       splitChunks: {
         chunks: 'all',
-        maxSize: 244000, // Reduce chunk size to prevent memory issues
+        maxSize: 1024000, // Increased from 244000 to 1MB to prevent memory issues
         cacheGroups: {
           default: {
             minChunks: 1,
@@ -21,7 +21,7 @@ const nextConfig = {
             name: 'vendors',
             priority: -10,
             chunks: 'all',
-            maxSize: 244000,
+            maxSize: 1024000, // Increased from 244000 to 1MB
           },
         },
       },
