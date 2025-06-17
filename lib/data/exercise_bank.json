@@ -1,0 +1,1939 @@
+[
+  {
+    "id": 1,
+    "name": "3 Way Shoulder Raise",
+    "category": "shoulders",
+    "muscleGroups": [
+      "shoulders"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 2,
+    "name": "45 Degree Band Pull Aparts",
+    "category": "shoulders",
+    "muscleGroups": [
+      "rear delts",
+      "upper back"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 6,
+    "name": "Alternating DB Shoulder Press",
+    "category": "shoulders",
+    "muscleGroups": [
+      "shoulders",
+      "core"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 11,
+    "name": "Arnold Press",
+    "category": "shoulders",
+    "muscleGroups": [
+      "shoulders"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 13,
+    "name": "Band Cuban Press",
+    "category": "shoulders",
+    "muscleGroups": [
+      "shoulders",
+      "rotator cuff"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 15,
+    "name": "Band Face Pulls",
+    "category": "shoulders",
+    "muscleGroups": [
+      "rear delts",
+      "upper back"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 17,
+    "name": "Band Pull Aparts",
+    "category": "shoulders",
+    "muscleGroups": [
+      "rear delts",
+      "upper back"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 27,
+    "name": "Bentover I,Y,Ts",
+    "category": "shoulders",
+    "muscleGroups": [
+      "shoulders",
+      "upper back"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 68,
+    "name": "Lateral Delt Raise",
+    "category": "shoulders",
+    "muscleGroups": [
+      "shoulders"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 95,
+    "name": "Overhead Press",
+    "category": "shoulders",
+    "muscleGroups": [
+      "shoulders",
+      "core"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 107,
+    "name": "Plate Cuban Press",
+    "category": "shoulders",
+    "muscleGroups": [
+      "shoulders",
+      "rotator cuff"
+    ],
+    "equipment": [
+      "weight plate"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 28,
+    "name": "Bicep Curl",
+    "category": "arms",
+    "muscleGroups": [
+      "biceps"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 29,
+    "name": "Bicep and Tricep of Your Choice",
+    "category": "arms",
+    "muscleGroups": [
+      "biceps",
+      "triceps"
+    ],
+    "equipment": [
+      "various"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 54,
+    "name": "Hammer Curl",
+    "category": "arms",
+    "muscleGroups": [
+      "biceps",
+      "forearms"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 142,
+    "name": "Tricep Dips",
+    "category": "arms",
+    "muscleGroups": [
+      "triceps"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 143,
+    "name": "Tricep Pushdown",
+    "category": "arms",
+    "muscleGroups": [
+      "triceps"
+    ],
+    "equipment": [
+      "cable machine"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 26,
+    "name": "Bench Press",
+    "category": "chest",
+    "muscleGroups": [
+      "chest",
+      "shoulders",
+      "triceps"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 43,
+    "name": "DB Incline Bench",
+    "category": "chest",
+    "muscleGroups": [
+      "chest",
+      "shoulders"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 60,
+    "name": "Incline DB Bench",
+    "category": "chest",
+    "muscleGroups": [
+      "chest",
+      "shoulders"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 100,
+    "name": "Paused Bench Press",
+    "category": "chest",
+    "muscleGroups": [
+      "chest",
+      "shoulders",
+      "triceps"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "advanced",
+    "type": "strength"
+  },
+  {
+    "id": 102,
+    "name": "Paused Incline DB Bench",
+    "category": "chest",
+    "muscleGroups": [
+      "chest",
+      "shoulders"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "advanced",
+    "type": "strength"
+  },
+  {
+    "id": 110,
+    "name": "Push-Up",
+    "category": "chest",
+    "muscleGroups": [
+      "chest",
+      "shoulders",
+      "triceps"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 140,
+    "name": "Tempo Bench Press",
+    "category": "chest",
+    "muscleGroups": [
+      "chest",
+      "shoulders",
+      "triceps"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "advanced",
+    "type": "strength"
+  },
+  {
+    "id": 37,
+    "name": "Cable Row",
+    "category": "back",
+    "muscleGroups": [
+      "lats",
+      "rhomboids"
+    ],
+    "equipment": [
+      "cable machine"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 41,
+    "name": "Chin-Up",
+    "category": "back",
+    "muscleGroups": [
+      "lats",
+      "biceps"
+    ],
+    "equipment": [
+      "pull-up bar"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 67,
+    "name": "Lat Pulldown",
+    "category": "back",
+    "muscleGroups": [
+      "lats"
+    ],
+    "equipment": [
+      "cable machine"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 76,
+    "name": "Low Row",
+    "category": "back",
+    "muscleGroups": [
+      "lats",
+      "rhomboids"
+    ],
+    "equipment": [
+      "cable machine"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 103,
+    "name": "Paused Lat Pulldown",
+    "category": "back",
+    "muscleGroups": [
+      "lats"
+    ],
+    "equipment": [
+      "cable machine"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 104,
+    "name": "Paused Reverse Grip Lat Pulldown",
+    "category": "back",
+    "muscleGroups": [
+      "lats",
+      "biceps"
+    ],
+    "equipment": [
+      "cable machine"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 109,
+    "name": "Pull-Up",
+    "category": "back",
+    "muscleGroups": [
+      "lats",
+      "biceps"
+    ],
+    "equipment": [
+      "pull-up bar"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 113,
+    "name": "Reverse Grip Lat Pulldown",
+    "category": "back",
+    "muscleGroups": [
+      "lats",
+      "biceps"
+    ],
+    "equipment": [
+      "cable machine"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 128,
+    "name": "Sorinex Low Row",
+    "category": "back",
+    "muscleGroups": [
+      "lats",
+      "rhomboids"
+    ],
+    "equipment": [
+      "cable machine"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 137,
+    "name": "TEMPO DB One Arm Row",
+    "category": "back",
+    "muscleGroups": [
+      "lats",
+      "rhomboids"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 12,
+    "name": "Back Squat",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 21,
+    "name": "Barbell Reverse Lunge",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 22,
+    "name": "Barbell Split Squat",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 32,
+    "name": "Bodyweight Squats",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 44,
+    "name": "DB Lateral Lunge",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes",
+      "adductors"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 46,
+    "name": "DB SL Glute Bridge",
+    "category": "legs",
+    "muscleGroups": [
+      "glutes",
+      "hamstrings"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 53,
+    "name": "Glute Bridge",
+    "category": "legs",
+    "muscleGroups": [
+      "glutes",
+      "hamstrings"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 59,
+    "name": "Hip Thrust",
+    "category": "legs",
+    "muscleGroups": [
+      "glutes"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 63,
+    "name": "Jump Squats",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 73,
+    "name": "Leg Press",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "leg press machine"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 77,
+    "name": "Lunges",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 96,
+    "name": "PAUSED Barbell Squat",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "advanced",
+    "type": "strength"
+  },
+  {
+    "id": 99,
+    "name": "Paused Back Squat",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "advanced",
+    "type": "strength"
+  },
+  {
+    "id": 129,
+    "name": "Spanish Squat",
+    "category": "legs",
+    "muscleGroups": [
+      "quads"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 131,
+    "name": "Split Squat ISOs",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 136,
+    "name": "Step-Ups",
+    "category": "legs",
+    "muscleGroups": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "box/step"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 146,
+    "name": "Wall Sit",
+    "category": "legs",
+    "muscleGroups": [
+      "quads"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 56,
+    "name": "Heel Elevated Wall Sit",
+    "category": "legs",
+    "muscleGroups": [
+      "quads"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 20,
+    "name": "Barbell RDL",
+    "category": "legs",
+    "muscleGroups": [
+      "hamstrings",
+      "glutes"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 23,
+    "name": "Barbell Staggered Stance RDLs",
+    "category": "legs",
+    "muscleGroups": [
+      "hamstrings",
+      "glutes"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 47,
+    "name": "Deadlift",
+    "category": "legs",
+    "muscleGroups": [
+      "hamstrings",
+      "glutes",
+      "back"
+    ],
+    "equipment": [
+      "barbell"
+    ],
+    "difficulty": "advanced",
+    "type": "strength"
+  },
+  {
+    "id": 71,
+    "name": "Leg Curl",
+    "category": "legs",
+    "muscleGroups": [
+      "hamstrings"
+    ],
+    "equipment": [
+      "leg curl machine"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 72,
+    "name": "Leg Extension",
+    "category": "legs",
+    "muscleGroups": [
+      "quads"
+    ],
+    "equipment": [
+      "leg extension machine"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 78,
+    "name": "Lying SL Band Hamstring Curl",
+    "category": "legs",
+    "muscleGroups": [
+      "hamstrings"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 118,
+    "name": "SL DB RDL",
+    "category": "legs",
+    "muscleGroups": [
+      "hamstrings",
+      "glutes"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 38,
+    "name": "Calf Raises",
+    "category": "legs",
+    "muscleGroups": [
+      "calves"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 45,
+    "name": "DB SL Calf Raises",
+    "category": "legs",
+    "muscleGroups": [
+      "calves"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 65,
+    "name": "Keiser Calve Raises",
+    "category": "legs",
+    "muscleGroups": [
+      "calves"
+    ],
+    "equipment": [
+      "keiser machine"
+    ],
+    "difficulty": "beginner",
+    "type": "strength"
+  },
+  {
+    "id": 117,
+    "name": "SL Calf ISOs",
+    "category": "legs",
+    "muscleGroups": [
+      "calves"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 14,
+    "name": "Band Deadbugs",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 16,
+    "name": "Band Pallof Rotation",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 18,
+    "name": "Banded Deadbugs",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 19,
+    "name": "Banded Leg Raises",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 83,
+    "name": "MB Sit Ups",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "medicine ball"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 88,
+    "name": "MB Toe Touches",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "medicine ball"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 91,
+    "name": "Mountain Climbers",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 93,
+    "name": "Oblique Crunches Off Bench",
+    "category": "core",
+    "muscleGroups": [
+      "obliques"
+    ],
+    "equipment": [
+      "bench"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 94,
+    "name": "Oblique Side Holds Off Bench",
+    "category": "core",
+    "muscleGroups": [
+      "obliques"
+    ],
+    "equipment": [
+      "bench"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 97,
+    "name": "Pallof Press",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "cable machine"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 98,
+    "name": "Pallof Rotation",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "cable machine"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 106,
+    "name": "Plank",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "core"
+  },
+  {
+    "id": 112,
+    "name": "Reverse Crunch",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "core"
+  },
+  {
+    "id": 116,
+    "name": "Russian Twist",
+    "category": "core",
+    "muscleGroups": [
+      "obliques"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "core"
+  },
+  {
+    "id": 122,
+    "name": "Side Plank",
+    "category": "core",
+    "muscleGroups": [
+      "obliques",
+      "core"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 123,
+    "name": "Side Plank Hip Dips",
+    "category": "core",
+    "muscleGroups": [
+      "obliques",
+      "core"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 144,
+    "name": "V-Ups",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 30,
+    "name": "Bike",
+    "category": "cardio",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "stationary bike"
+    ],
+    "difficulty": "beginner",
+    "type": "cardio"
+  },
+  {
+    "id": 31,
+    "name": "Bike Intervals",
+    "category": "cardio",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "stationary bike"
+    ],
+    "difficulty": "intermediate",
+    "type": "cardio"
+  },
+  {
+    "id": 42,
+    "name": "Cycling",
+    "category": "cardio",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "bike"
+    ],
+    "difficulty": "beginner",
+    "type": "cardio"
+  },
+  {
+    "id": 50,
+    "name": "Elliptical",
+    "category": "cardio",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "elliptical"
+    ],
+    "difficulty": "beginner",
+    "type": "cardio"
+  },
+  {
+    "id": 61,
+    "name": "Incline Walk",
+    "category": "cardio",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "treadmill"
+    ],
+    "difficulty": "beginner",
+    "type": "cardio"
+  },
+  {
+    "id": 62,
+    "name": "Jump Rope",
+    "category": "cardio",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "jump rope"
+    ],
+    "difficulty": "intermediate",
+    "type": "cardio"
+  },
+  {
+    "id": 114,
+    "name": "Rowing",
+    "category": "cardio",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "rowing machine"
+    ],
+    "difficulty": "intermediate",
+    "type": "cardio"
+  },
+  {
+    "id": 115,
+    "name": "Running",
+    "category": "cardio",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "cardio"
+  },
+  {
+    "id": 120,
+    "name": "Shadow Boxing",
+    "category": "cardio",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "intermediate",
+    "type": "cardio"
+  },
+  {
+    "id": 132,
+    "name": "Stair Running",
+    "category": "cardio",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "stairs"
+    ],
+    "difficulty": "intermediate",
+    "type": "cardio"
+  },
+  {
+    "id": 133,
+    "name": "Stairmaster",
+    "category": "cardio",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "stairmaster"
+    ],
+    "difficulty": "beginner",
+    "type": "cardio"
+  },
+  {
+    "id": 24,
+    "name": "Battle Ropes",
+    "category": "power",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "battle ropes"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 33,
+    "name": "Box Jumps",
+    "category": "power",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "box"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 34,
+    "name": "Burpee",
+    "category": "power",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 49,
+    "name": "Drop Lunges + Two Rhythm Hops",
+    "category": "power",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "advanced",
+    "type": "plyometric"
+  },
+  {
+    "id": 64,
+    "name": "Jumping Jacks",
+    "category": "power",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "plyometric"
+  },
+  {
+    "id": 66,
+    "name": "Kettlebell Swing",
+    "category": "power",
+    "muscleGroups": [
+      "glutes",
+      "core"
+    ],
+    "equipment": [
+      "kettlebell"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 69,
+    "name": "Lateral Skater Jumps",
+    "category": "power",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 74,
+    "name": "Line Hops Fwd/Back",
+    "category": "power",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 75,
+    "name": "Line Hops Side/Side",
+    "category": "power",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 81,
+    "name": "MB Overhead Toss",
+    "category": "power",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "medicine ball"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 82,
+    "name": "MB Rotational Toss",
+    "category": "power",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "medicine ball"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 84,
+    "name": "MB Slams",
+    "category": "power",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "medicine ball"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 85,
+    "name": "MB Split Stance Slams",
+    "category": "power",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "medicine ball"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 86,
+    "name": "MB Squat Jumps",
+    "category": "power",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "medicine ball"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 87,
+    "name": "MB Squat to Throw",
+    "category": "power",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "medicine ball"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 124,
+    "name": "Single Leg Hurdle Hops Side/Side",
+    "category": "power",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "hurdles"
+    ],
+    "difficulty": "advanced",
+    "type": "plyometric"
+  },
+  {
+    "id": 125,
+    "name": "Skater Hops",
+    "category": "power",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 126,
+    "name": "Snap Down + Jump",
+    "category": "power",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "advanced",
+    "type": "plyometric"
+  },
+  {
+    "id": 127,
+    "name": "Snap Down, Pause, Jump",
+    "category": "power",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "advanced",
+    "type": "plyometric"
+  },
+  {
+    "id": 3,
+    "name": "A March",
+    "category": "agility",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "warmup"
+  },
+  {
+    "id": 4,
+    "name": "A Skip",
+    "category": "agility",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "intermediate",
+    "type": "warmup"
+  },
+  {
+    "id": 5,
+    "name": "Agility Ladder Drills",
+    "category": "agility",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "agility ladder"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 25,
+    "name": "Bear Crawls",
+    "category": "agility",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 35,
+    "name": "Butt Kicks",
+    "category": "agility",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "warmup"
+  },
+  {
+    "id": 57,
+    "name": "High Knees",
+    "category": "agility",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "beginner",
+    "type": "warmup"
+  },
+  {
+    "id": 70,
+    "name": "Lateral Slide (BW)",
+    "category": "agility",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 79,
+    "name": "Lying Starts",
+    "category": "agility",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 89,
+    "name": "Mini Band Lateral Steps",
+    "category": "agility",
+    "muscleGroups": [
+      "glutes"
+    ],
+    "equipment": [
+      "mini band"
+    ],
+    "difficulty": "beginner",
+    "type": "warmup"
+  },
+  {
+    "id": 90,
+    "name": "Monster Band Steps",
+    "category": "agility",
+    "muscleGroups": [
+      "glutes"
+    ],
+    "equipment": [
+      "resistance band"
+    ],
+    "difficulty": "intermediate",
+    "type": "warmup"
+  },
+  {
+    "id": 108,
+    "name": "Plate Lateral Slide",
+    "category": "agility",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "weight plate"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 134,
+    "name": "Standing Start Sprints",
+    "category": "agility",
+    "muscleGroups": [
+      "legs"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "intermediate",
+    "type": "plyometric"
+  },
+  {
+    "id": 52,
+    "name": "GHL ECC",
+    "category": "functional",
+    "muscleGroups": [
+      "hamstrings"
+    ],
+    "equipment": [
+      "GHL machine"
+    ],
+    "difficulty": "advanced",
+    "type": "strength"
+  },
+  {
+    "id": 7,
+    "name": "Alternating MB Pikes",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "medicine ball"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 8,
+    "name": "Alternating Pikes",
+    "category": "core",
+    "muscleGroups": [
+      "core"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "difficulty": "intermediate",
+    "type": "core"
+  },
+  {
+    "id": 80,
+    "name": "MB Berry Pickers",
+    "category": "functional",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "medicine ball"
+    ],
+    "difficulty": "intermediate",
+    "type": "strength"
+  },
+  {
+    "id": 9,
+    "name": "Ankle Circles",
+    "category": "mobility",
+    "muscleGroups": [
+      "ankles"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 10,
+    "name": "Arm Circles",
+    "category": "mobility",
+    "muscleGroups": [
+      "shoulders"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 36,
+    "name": "Butterfly Stretch",
+    "category": "mobility",
+    "muscleGroups": [
+      "hips"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 39,
+    "name": "Cat-Cow Stretch",
+    "category": "mobility",
+    "muscleGroups": [
+      "spine"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 40,
+    "name": "Childs Pose",
+    "category": "mobility",
+    "muscleGroups": [
+      "back"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 48,
+    "name": "Downward Dog",
+    "category": "mobility",
+    "muscleGroups": [
+      "full body"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 55,
+    "name": "Hamstring Stretch",
+    "category": "mobility",
+    "muscleGroups": [
+      "hamstrings"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 58,
+    "name": "Hip Flexor Stretch",
+    "category": "mobility",
+    "muscleGroups": [
+      "hip flexors"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 92,
+    "name": "Neck Rolls",
+    "category": "mobility",
+    "muscleGroups": [
+      "neck"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 105,
+    "name": "Pigeon Pose",
+    "category": "mobility",
+    "muscleGroups": [
+      "hips"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "intermediate",
+    "type": "flexibility"
+  },
+  {
+    "id": 111,
+    "name": "Quad Stretch",
+    "category": "mobility",
+    "muscleGroups": [
+      "quads"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 119,
+    "name": "Seated Forward Fold",
+    "category": "mobility",
+    "muscleGroups": [
+      "hamstrings"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 121,
+    "name": "Side Lying TSpine Opener",
+    "category": "mobility",
+    "muscleGroups": [
+      "thoracic spine"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "intermediate",
+    "type": "flexibility"
+  },
+  {
+    "id": 130,
+    "name": "Spinal Twist",
+    "category": "mobility",
+    "muscleGroups": [
+      "spine"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 135,
+    "name": "Standing Toe Touch",
+    "category": "mobility",
+    "muscleGroups": [
+      "hamstrings"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 138,
+    "name": "TKEs",
+    "category": "mobility",
+    "muscleGroups": [
+      "knees"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 139,
+    "name": "TSpine Wall Windmills",
+    "category": "mobility",
+    "muscleGroups": [
+      "thoracic spine"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "intermediate",
+    "type": "flexibility"
+  },
+  {
+    "id": 141,
+    "name": "Thoracic Bridge",
+    "category": "mobility",
+    "muscleGroups": [
+      "thoracic spine"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "intermediate",
+    "type": "flexibility"
+  },
+  {
+    "id": 145,
+    "name": "Wall Angels",
+    "category": "mobility",
+    "muscleGroups": [
+      "shoulders"
+    ],
+    "equipment": [
+      "none"
+    ],
+    "difficulty": "beginner",
+    "type": "flexibility"
+  },
+  {
+    "id": 101,
+    "name": "Paused DB Shoulder Press",
+    "category": "shoulders",
+    "muscleGroups": [
+      "shoulders"
+    ],
+    "equipment": [
+      "dumbbells"
+    ],
+    "difficulty": "advanced",
+    "type": "strength"
+  }
+]
