@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp, getApps } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
@@ -12,13 +12,41 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Check if Firebase config is complete
+const isFirebaseConfigured = () => {
+  return !!(
+    firebaseConfig.apiKey &&
+    firebaseConfig.authDomain &&
+    firebaseConfig.projectId &&
+    firebaseConfig.storageBucket &&
+    firebaseConfig.messagingSenderId &&
+    firebaseConfig.appId
+  );
+};
 
-// Initialize Firebase Authentication and get a reference to the service
-export const auth = getAuth(app);
+// Initialize Firebase only if not already initialized
+let app;
+let auth;
+let db;
 
-// Initialize Cloud Firestore and get a reference to the service
-export const db = getFirestore(app);
+if (typeof window !== 'undefined' && isFirebaseConfigured()) {
+  try {
+    // Check if Firebase app is already initialized
+    app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+    
+    // Initialize Firebase Authentication and get a reference to the service
+    auth = getAuth(app);
+    
+    // Initialize Cloud Firestore and get a reference to the service
+    db = getFirestore(app);
+  } catch (error) {
+    console.error('Firebase initialization error:', error);
+  }
+}
 
+// Export with fallback handling
+export { auth, db };
 export default app;
+
+// Export configuration status for debugging
+export const isConfigured = isFirebaseConfigured();
