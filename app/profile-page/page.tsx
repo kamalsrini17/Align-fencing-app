@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -24,13 +25,16 @@ import {
   Edit,
   Trash2
 } from 'lucide-react';
+import { getUserSession, setUserSession, isAuthenticated } from '@/lib/auth';
 
 export default function ProfilePage() {
+  const router = useRouter();
+  const [user, setUser] = useState<any>(null);
   const [isEditing, setIsEditing] = useState(false);
   const [profile, setProfile] = useState({
-    firstName: 'Alex',
-    lastName: 'Johnson',
-    email: 'alex.johnson@example.com',
+    firstName: '',
+    lastName: '',
+    email: '',
     age: '28',
     gender: 'male',
     height: '175',
@@ -40,6 +44,24 @@ export default function ProfilePage() {
     goals: ['weight_loss', 'muscle_gain'],
     activityLevel: 'moderately_active'
   });
+
+  useEffect(() => {
+    if (!isAuthenticated()) {
+      router.push('/sign-in-page');
+      return;
+    }
+    
+    const userData = getUserSession();
+    if (userData) {
+      setUser(userData);
+      setProfile(prev => ({
+        ...prev,
+        firstName: userData.firstName,
+        lastName: userData.lastName,
+        email: userData.email
+      }));
+    }
+  }, [router]);
 
   const fitnessGoals = [
     { id: 'weight_loss', label: 'Weight Loss' },
@@ -65,7 +87,17 @@ export default function ProfilePage() {
 
   const handleSave = () => {
     setIsEditing(false);
-    // Here you would save to your backend
+    // Update user session with new profile data
+    if (user) {
+      const updatedUser = {
+        ...user,
+        firstName: profile.firstName,
+        lastName: profile.lastName,
+        email: profile.email
+      };
+      setUserSession(updatedUser);
+      setUser(updatedUser);
+    }
     console.log('Saving profile:', profile);
   };
 
@@ -78,6 +110,19 @@ export default function ProfilePage() {
   const convertWeight = (kg: number) => {
     return Math.round(kg * 2.205);
   };
+
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <Activity className="w-8 h-8 text-white animate-pulse" />
+          </div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

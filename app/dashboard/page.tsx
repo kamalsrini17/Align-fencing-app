@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -24,12 +25,43 @@ import {
   Zap,
   Heart,
   Brain,
-  Moon
+  Moon,
+  LogOut
 } from 'lucide-react';
+import { getUserSession, clearUserSession, isAuthenticated } from '@/lib/auth';
 
 export default function Dashboard() {
-  const [userName] = useState('Alex Johnson');
+  const router = useRouter();
+  const [user, setUser] = useState<any>(null);
   const [currentStreak] = useState(7);
+
+  useEffect(() => {
+    if (!isAuthenticated()) {
+      router.push('/sign-in-page');
+      return;
+    }
+    
+    const userData = getUserSession();
+    setUser(userData);
+  }, [router]);
+
+  const handleSignOut = () => {
+    clearUserSession();
+    router.push('/sign-in-page');
+  };
+
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <Activity className="w-8 h-8 text-white animate-pulse" />
+          </div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   const todayStats = {
     readinessScore: 85,
@@ -111,10 +143,13 @@ export default function Dashboard() {
                   <Settings className="w-4 h-4" />
                 </Button>
               </Link>
+              <Button variant="ghost" size="sm" onClick={handleSignOut}>
+                <LogOut className="w-4 h-4" />
+              </Button>
               <Avatar className="w-8 h-8">
                 <AvatarImage src="" />
                 <AvatarFallback className="bg-gradient-to-br from-blue-600 to-purple-600 text-white text-sm">
-                  {userName.split(' ').map(n => n[0]).join('')}
+                  {user.firstName[0]}{user.lastName[0]}
                 </AvatarFallback>
               </Avatar>
             </div>
@@ -126,7 +161,7 @@ export default function Dashboard() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Welcome back, {userName.split(' ')[0]}! 👋
+            Welcome back, {user.firstName}! 👋
           </h1>
           <p className="text-gray-600">
             You&apos;re on a {currentStreak}-day streak! Keep up the great work.

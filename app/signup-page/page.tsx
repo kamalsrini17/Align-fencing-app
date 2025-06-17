@@ -2,15 +2,18 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Activity, Eye, EyeOff, CheckCircle, Mail, Lock, User } from 'lucide-react';
+import { Activity, Eye, EyeOff, CheckCircle, Mail, Lock, User, AlertCircle } from 'lucide-react';
+import { createUser, setUserSession } from '@/lib/auth';
 
 export default function SignUpPage() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -23,6 +26,7 @@ export default function SignUpPage() {
   const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [signupError, setSignupError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -30,6 +34,9 @@ export default function SignUpPage() {
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
+    }
+    if (signupError) {
+      setSignupError('');
     }
   };
 
@@ -69,13 +76,27 @@ export default function SignUpPage() {
     if (!validateForm()) return;
 
     setIsLoading(true);
+    setSignupError('');
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const result = await createUser({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        password: formData.password
+      });
+      
+      if (result.success && result.user) {
+        setUserSession(result.user);
+        router.push('/dashboard');
+      } else {
+        setSignupError(result.error || 'Account creation failed. Please try again.');
+      }
+    } catch (error) {
+      setSignupError('An unexpected error occurred. Please try again.');
+    } finally {
       setIsLoading(false);
-      // Redirect to profile setup
-      window.location.href = '/profile-page';
-    }, 2000);
+    }
   };
 
   const passwordStrength = (password: string) => {
@@ -120,6 +141,14 @@ export default function SignUpPage() {
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Signup Error */}
+              {signupError && (
+                <Alert variant="destructive">
+                  <AlertCircle className="h-4 w-4" />
+                  <AlertDescription>{signupError}</AlertDescription>
+                </Alert>
+              )}
+
               {/* Name Fields */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">

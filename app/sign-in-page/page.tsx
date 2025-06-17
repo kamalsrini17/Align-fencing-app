@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -9,8 +10,10 @@ import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Activity, Eye, EyeOff, Mail, Lock, AlertCircle } from 'lucide-react';
+import { authenticateUser, setUserSession } from '@/lib/auth';
 
 export default function SignInPage() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -57,16 +60,20 @@ export default function SignInPage() {
     setIsLoading(true);
     setLoginError('');
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false);
-      // For demo purposes, accept any email/password combination
-      if (formData.email && formData.password) {
-        window.location.href = '/dashboard';
+    try {
+      const result = await authenticateUser(formData.email, formData.password);
+      
+      if (result.success && result.user) {
+        setUserSession(result.user);
+        router.push('/dashboard');
       } else {
-        setLoginError('Invalid email or password. Please try again.');
+        setLoginError(result.error || 'Login failed. Please try again.');
       }
-    }, 1500);
+    } catch (error) {
+      setLoginError('An unexpected error occurred. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -179,10 +186,12 @@ export default function SignInPage() {
 
             {/* Demo Credentials */}
             <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-              <p className="text-sm text-blue-800 font-medium mb-2">Demo Access:</p>
-              <p className="text-xs text-blue-700">
-                Use any email and password combination to access the demo dashboard.
-              </p>
+              <p className="text-sm text-blue-800 font-medium mb-2">Demo Credentials:</p>
+              <div className="text-xs text-blue-700 space-y-1">
+                <p><strong>Email:</strong> alex.johnson@example.com</p>
+                <p><strong>Password:</strong> password123</p>
+                <p className="mt-2">Or use: demo@example.com / demo123</p>
+              </div>
             </div>
 
             {/* Sign Up Link */}
